@@ -35,9 +35,8 @@ class MobileThemeHooks implements Gdn_IPlugin {
       if (IsMobile() && is_object($Sender->Head)) {
          $Sender->Head->AddTag('meta', array('name' => 'viewport', 'content' => "width=device-width,minimum-scale=1.0,maximum-scale=1.0"));
          
-         // If not looking for a specific comment, hide the address bar in iphone
          $Sender->Head->AddString('<script type="text/javascript">
-
+// If not looking for a specific comment, hide the address bar in iphone
 var hash = window.location.href.split("#")[1];
 if (typeof(hash) == "undefined") {
    setTimeout(function () {
@@ -133,6 +132,9 @@ $photo = UserPhoto(Gdn::Session()->User);
    
    public function DiscussionsController_AfterBuildPager_Handler($Sender) {
       $Sender->Pager->MoreCode = 'More Discussions';
+   }
+
+}';
    }
 
 }

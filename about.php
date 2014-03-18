@@ -12,7 +12,7 @@ You should have received a copy of the GNU General Public License along with Gar
 $ThemeInfo['mobile'] = array(
    'Name' => 'Mobile',
    'Description' => "A Dark design for mobile browsers, easy to read contains the panel and more options.",
-   'Version' => '2.1',
+   'Version' => '2.0',
    'Author' => "VrijVlinder",
    'AuthorEmail' => 'contact@vrijvlinder.com',
    'AuthorUrl' => 'http://vrijvlinder.com'

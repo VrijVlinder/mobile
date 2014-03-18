@@ -1,11 +1,12 @@
 
 #Body {
-background:transparent;
+background:#222;
 clear:left;
 margin:0;
 position:relative;
 width:100%;
-min-height:800px;
+height:auto;
+
 }
 
 #Content {
@@ -14,7 +15,7 @@ color:#ccc;
 float:left;
 margin:0;
 position:relative;
-width:100%;
+width: 99%!important;
 }
 
 #Content .Box {
@@ -43,7 +44,7 @@ width:100%;
 }
 
 #Foot {
-background:transparent;
+background:#000;
 border:none;
 font-size:14pt;
 line-height:1.5;
@@ -55,13 +56,23 @@ text-align:center;
 border-radius:3px;
 }
 
+#Foot a:hover {
+color:#00afa0;
+font-size:12pt;
+text-shadow:0 1px 0 #000;
+}
+
 #Foot div {
 background:none transparent;
 margin:0;
 padding-bottom:5px;
 width:100%;
+text-align: center;
 }
-
+#Foot .Bottom a{
+	background:none;
+	border:none;
+}
 #Head {
 background:#222;
 margin:0;
@@ -71,7 +82,7 @@ text-align:left;
 }
 
 #Panel {
-background:transparent;
+background:#666;
 display:block!important;
 float:left!important;
 margin-top:10px;
@@ -83,7 +94,6 @@ background:url(images/metalnav4.png);
 color:#000;
 font-weight:700;
 text-shadow:0 1px 0 #fff;
-border-bottom: 1px solid #222;
 }
 
 #Panel .FilterMenu li,.PanelInfo li {
@@ -97,21 +107,9 @@ border-top:1px solid #222;
 }
 
 #Panel li.Active a {
-color:#000;
+color:#666;
 }
 
-#Panel .PanelInfo.PanelCategories li a {
-color:#ccc;
-padding: 0;
-border: none;
-text-shadow: 0 1px 0 #000;
-background: none 
-transparent!important;
-}
-#Panel .PanelInfo.PanelCategories li.Depth a{
-color:#333;
-text-shadow:0 1px 0 #000;
-}
 #Status {
 background:none;
 color:#555;
@@ -147,6 +145,19 @@ width:auto;
 color:#00afa0;
 font-size:12pt;
 font-weight:700;
+}
+.Attachment:hover .FileHover {
+z-index: 101;
+display: block;
+background: #000;
+padding: 6px;
+border: 1px solid #666;
+box-shadow: 0px 2px 10px #000;
+-moz-box-shadow: 0px 2px 10px #000;
+-webkit-box-shadow: 0px 2px 10px #000;
+position: absolute;
+top: -7px;
+left: -7px;
 }
 
 .Banner {
@@ -192,8 +203,8 @@ position:relative;
 top:-3px;
 }
 
-.Banner ul li a,#Foot a,div.P a.Button.Primary.SignInPopup,div.P a.Button.ApplyButton,input.Button.Primary.CommentButton,a.DraftButton,a.Button,a.PreviewButton,span.Back a,a.Button.Primary.Action.NewDiscussion.BigButton,input.Button.Primary.DiscussionButton,input.Button.DraftButton,input.Button,div.AttachFileLink a,.NavButton,.MItem a.CommentOption,a.TabLink,a.TabLink:link, a.TabLink:visited, a.TabLink:active,.PanelInfo li a,.EditCommentForm .Buttons .Cancel, .CommentForm .Buttons .Cancel, .CommentForm .Buttons .Back {
-background:url(images/metalnav4.png)!important;
+.Banner ul li a,#Foot a,div.P a.Button.Primary.SignInPopup,div.P a.Button.ApplyButton,input.Button.Primary.CommentButton,a.DraftButton,a.Button,a.PreviewButton,span.Back a,a.Button.Primary.Action.NewDiscussion.BigButton,input.Button.Primary.DiscussionButton,input.Button.DraftButton,input.Button,div.AttachFileLink a,.NavButton,.MItem a.CommentOption,a.Close {
+background:url(images/metalnav4.png);
 border:1px solid #aaa;
 border-radius:3px;
 color:#000;
@@ -201,7 +212,7 @@ display:inline-block;
 font-size:12pt;
 font-weight:700;
 line-height:1.8;
-padding:6px 8px;
+padding:4px 6px;
 text-shadow:0 1px 0 #fff;
 }
 
@@ -215,12 +226,10 @@ width:auto;
 display:none;
 }
 
-.Banner ul li a:hover,ul.DataList .Mine span.Counts,ul.DataList span.NewCounts,ul.DataList .Mine span.NewCounts,.Button:hover,.Tabs li a:hover,body.Profile .PanelInfo li a:hover,a.Button,.FootMenu span a:hover, #Foot a.SignIn:hover,div.Popup h1, div.Popup h2,.EditCommentForm .Buttons .Cancel:hover, .CommentForm .Buttons .Cancel:hover, .CommentForm .Buttons .Back:hover{
-background:url(images/tealsteel.png)repeat!important;
+.Banner ul li a:hover,ul.DataList .Mine span.Counts,ul.DataList span.NewCounts,ul.DataList .Mine span.NewCounts {
+background:url(images/tealsteel.png);
 border-radius:3px;
-color:#fff;
-font-size: 12pt;
-text-shadow: 0 1px 0 #000;
+padding:4px 6px;
 }
 
 .Banner ul li.Connect a {
@@ -241,61 +250,62 @@ background:rgba(82,82,82,0.7);
 border-radius:8px;
 padding:15px;
 }
-.Box {
-background:#666;
-border: 1px solid #adadad;
-color:#000;
+
+.Box p {
+margin:5px 0;
+text-align:center;
 }
-.Box h4 a:hover {
-color:#fff;
-text-shadow:0 1px 0 #000;
+.Box.GuestBox {
+border-radius: 1px;
+-moz-border-radius: 1px;
+-webkit-border-radius: 1px;
+background: #222;
+color: #fff;
+padding: 6px 10px;
+margin: 0 0 10px;
+box-shadow: 0px 0px 2px #999;
+-moz-box-shadow: 0px 0px 2px #999;
+-webkit-box-shadow: 0px 0px 2px #999;
 }
-.Box h4 a {
+.Box.GuestBox p {
+font-size: 100%;
+padding: 0 0 4px;
+color: #fff;
+}
+.Box.GuestBox h4 {
 font-size: 110%;
 color: #000;
 font-weight: bold;
 margin: 0;
-padding: 0 0 1px;
-}
-.Box dl dt {
-font-size: 12px;
-float: left;
-width: 80px;
-color: #ccc;
-overflow: hidden;
-white-space: nowrap;
-text-shadow: 0 1px 1px #000;
-}
-.Box p {
-font-size: 100%;
-padding: 0 0 4px;
-color: #ccc;
-text-shadow: 1px 1px 1px #000;
-margin:5px 0;
-text-align:center;
+padding: 3px;
+border: 1px solid #aaa;
 }
 .Box h4 {
 font-size: 110%;
-color:#000;
+color: #000!important;
 font-weight: bold;
 margin: 0;
-padding: 0 0 1px;
-text-align: center;
+padding: 3px!important;
 }
-.Box dl dd {
-font-size: 12px;
-margin-left: 100px;
+.Box {
+border-radius: 1px;
+-moz-border-radius: 1px;
+-webkit-border-radius: 1px;
+background:#222!important;
+color:#fff!important;
+padding: 6px 10px;
+margin: 0 0 10px;
+box-shadow: 0px 0px 2px #999;
+-moz-box-shadow: 0px 0px 2px #999;
+-webkit-box-shadow: 0px 0px 2px #999;
 }
 
-.linkBar .Button{
-color: #111;
-border: 1px solid #666;
-white-space: pre-wrap;
-background-size: 100% 100%;
+.Button {
 cursor:pointer;
 display:inline-block;
 margin:2px;
 }
+
 .Comment {
 color:#ccc;
 font-size:14pt;
@@ -315,20 +325,11 @@ font-size:13pt;
 line-height:1.5;
 padding:0;
 }
-.Content{
-opacity:1!important;
-}
 
 .CreateAccount {
-color:#ccc;
+color:#ADADAD;
 }
-.DataList .Item {
-margin: 0;
-padding: 4px 0;
-border: 0;
-position: relative;
-border-bottom: 1px solid #666;
-}
+
 .DataList .Excerpt {
 font-size:14px;
 font-weight:700;
@@ -342,7 +343,11 @@ font-size:18px;
 line-height:1.2;
 padding:6px;
 }
-
+.DismissMessage.Warning {
+background:lime;
+border: 2px dotted #222;
+color:#000;
+}
 .DiscussionForm .PostOptions label {
 display:inline;
 font-size:100%;
@@ -379,6 +384,7 @@ font-size:14pt;
 
 .EditCommentForm .Buttons .Cancel,.CommentForm .Buttons .Cancel,.CommentForm .Buttons .Back {
 float:right;
+line-height:2.6;
 }
 
 .EditCommentForm .Buttons,.CommentForm .Buttons {
@@ -446,9 +452,7 @@ color:#00afa0!important;
 background:none;
 border-bottom:1px solid #adadad;
 }
-.Footer{
-opacity:1!important;
-}
+
 .FootMenu span a,#Foot a.SignIn {
 color:#ccc;
 font-weight:700;
@@ -490,16 +494,16 @@ background:#222;
 color:#ccc!important;
 font-size:14px;
 }
-
+.Message h2 {
+background:none transparent;
+text-shadow:0 1px 0 #000;
+}
 .MessageForm {
 padding:8px 8px 5px;
 }
+
 .MessageForm .Tabs {
-padding: 0;
-border: 0;
-background: none;
-text-align: left;
-width: 98%;
+padding:0 8px;
 }
 
 .MessageForm,#DiscussionForm,#ConversationForm,#MessageForm {
@@ -519,10 +523,7 @@ margin:0;
 padding:5px 8px;
 position:relative;
 }
-.MessageForm .Tabs.CommentTabs ul {
-padding: 0;
-width: 98%;
-}
+
 .Messages {
 margin:0!important;
 }
@@ -570,34 +571,42 @@ border-bottom:1px solid #666;
 margin:0;
 padding:3px 0;
 }
+
+.P {
+margin: 5px 3px;
+text-align: center;
+}
 .PanelInfo li {
-background:transparent;
-border-bottom: 1px solid #666;
+background:#333;
+border: 1px solid #666;
 padding: 2px 4px;
 text-align: right;
 }
 .PanelInfo {
-border-top: 1px solid #222;
+border-top: 1px solid #666;
 border-bottom: 0;
 }
-.PanelInfo li a:hover {
-color:#fff!important;
-text-shadow: 0 1px 0 #000;
+body.Profile .PanelInfo {
+border-bottom: 1px solid #666;
 }
-.P {
-margin:5px 3px;
+
+.PanelInfo {
+border-top: 1px solid #666;
+border-bottom: 0;
 }
+
 .Photo {
-width: 98%;
-height: 100%;
+border-radius:5px;
+float:left;
+margin:6px;
+width:60%;
 }
 
 .Photo img {
-border-radius:250px;
-display: block;
-height: auto;
-width: 250px;
-margin: 0 auto;
+border-radius:5px;
+display:block;
+height:auto;
+width:140px;
 }
 
 .Popup h1,.Popup h2 {
@@ -618,13 +627,13 @@ clear:none;
 }
 
 .ProfilePhotoLarge {
-width:150px;
+width:150px!important;
 }
 
 .ProfileTabs {
 background:none repeat scroll 0 0 transparent;
 border:none;
-border-bottom:none;
+border-bottom:1px solid #adadad;
 clear:both;
 display:block;
 padding:6px 0 0;
@@ -646,9 +655,7 @@ min-height:20px;
 min-width:20px;
 vertical-align:top;
 }
-.Tabs.ProfileTabs ul li a{
-margin: 2px;
-}
+
 .Tabs li a span {
 -moz-border-radius:3px;
 -webkit-border-radius:3px;
@@ -662,17 +669,34 @@ margin:0 0 0 4px;
 padding:0 3px;
 }
 
-.Tabs ul {
-padding: 0 6px;
-display: inline-block;
+.Tabs li a,.Tabs li a:link,.Tabs li a:hover,.Tabs li a:active,.Tabs li a:visited {
+-moz-border-radius:3px 3px 0 0;
+-webkit-border-radius:3px 3px 0 0;
+background:#666;
+border:none;
+border-radius:3px 3px 0 0;
+color:#00afa0;
+font-size:11pt;
+line-height:11px;
+margin:0;
+padding:4px 10px 5px;
+text-decoration:none;
 }
+
+.Tabs li a:hover {
+color:#00afa0;
+text-decoration:underline;
+}
+
+.Tabs ul {
+padding:0 6px;
+white-space:nowrap;
+}
+
 .Tabs.HeadingTabs.DiscussionTabs.FirstPage {
-background:gold;
-color: #000;
-font-size: 16pt!important;
-width: 98%;
-margin-left: -5px;
-padding-bottom: 20px;
+background:#00afa0;
+color:#000;
+font-size:16pt!important;
 }
 
 .UploadProgress {
@@ -785,7 +809,7 @@ display:none;
 font-family:Arial;
 font-size:12px;
 text-align:left;
-width:100%!important;
+width:50%!important;
 }
 
 .ttb-panel.notranslate div {
@@ -815,13 +839,13 @@ border:none!important;
 }
 
 a {
-color:#0FF;
-text-decoration: none;
-text-shadow: 0 1px 1px #000;
+color:aqua;
+text-decoration:none;
 }
-a:hover{
-color:#fff;
+a.BigButton{
+display:none!important;
 }
+
 a.Active,.Tabs li.Active a {
 background:#222;
 border:1px solid #666;
@@ -834,9 +858,7 @@ position:relative;
 text-decoration:none;
 top:1px;
 }
-a.BigButton{
-display:none;
-}
+
 a.Back {
 -moz-border-radius:3px;
 -webkit-border-radius:3px;
@@ -888,7 +910,7 @@ a.TabLink,.SubTab {
 font-size:14px;
 }
 
-.MorePager a,.MorePager a:link,.MorePager a:visited,.MorePager a:active,.MorePager a:hover {
+a.TabLink,a.TabLink:link,a.TabLink:visited,a.TabLink:active,a.TabLink:hover,.MorePager a,.MorePager a:link,.MorePager a:visited,.MorePager a:active,.MorePager a:hover {
 -moz-border-radius:0;
 -webkit-border-radius:0;
 background:none;
@@ -906,7 +928,7 @@ font-size:16px;
 }
 
 a.Title:hover {
-color:#fff;
+color:#00afa0;
 font-size:16px;
 text-shadow:0 1px 0 #000;
 }
@@ -916,13 +938,22 @@ background:#222!important;
 color:#fff!important;
 font-size:14px!important;
 }
+a#vanilla{
+	background:none transparent;
+border:none;
+box-shadow:none;
+color:#666;
+font-size:12px;
+}
+a#vanilla:hover{
+	font-size:12px;
+}
 
-html,body {
+body {
 color:#fff;
 font-size:14px;
 font-weight:700;
 text-shadow:0 1px 0 #000;
-background:url(images/hex.jpeg)repeat;
 }
 
 body#dashboard_entry_password .Methods,body#dashboard_entry_signin .Methods,.Methods {
@@ -940,7 +971,7 @@ top:auto;
 }
 
 body,.Body,.Mine {
-background:transparent;
+background:#000;
 }
 
 body.Dashboard.Plugin #Content h1 {
@@ -954,11 +985,7 @@ body.Dashboard.Plugin #Content p {
 padding:3px;
 text-align:left!important;
 }
-body.Dashboard.Plugin h3 {
-color:#000;
-background-size:100% 100%;
 
-}
 body.Dashboard.Plugin.Games #Content object,body.Dashboard.Plugin.Games #Content embed {
 border:15px solid transparent;
 clear:both;
@@ -1036,7 +1063,7 @@ color:inherit;
 }
 
 body.Profile #Body {
-background:transparent;
+background:#666;
 }
 
 body.Profile #Content {
@@ -1046,26 +1073,12 @@ width:auto;
 }
 
 body.Profile #Panel {
-display:block;
-float:none;
-margin:0;
-width:100%;
-float:left;
-}
-body.Profile .PanelInfo {
-border: none;
-}
-body.Profile .PanelInfo li {
-border-bottom: 0;
-text-align: center;
+display: block;
+float: none;
+margin: 0;
+width: 100%;
 }
 
-body.Profile .PanelInfo li a {
-float: none;
-width: 90%;
-padding: 0;
-margin: 0;
-}
 body.Profile .Loading {
 background-color:#222;
 border-bottom:1px solid #adadad;
@@ -1079,6 +1092,16 @@ margin:0;
 
 div#Foot div a span {
 float:right;
+}
+div#JumpToTop {
+    background-image: url(images/back-up1-1.png) !important;
+    background-repeat: no-repeat;
+    height: 75px;
+    width: 75px !important;
+    z-index: 9999;
+}
+div.Bottom{
+	top:-85px;
 }
 
 div.AttachFileWrapper table.AttachFileContainer tr.FileAttachment td div.ProgressBar {
@@ -1206,7 +1229,7 @@ padding:4px;
 }
 
 h9.Title img {
-background:transparent;
+background:#000;
 height:auto;
 width:100%;
 }
@@ -1214,9 +1237,11 @@ width:100%;
 img.ProfilePhoto.ProfilePhotoMedium {
 border-radius:5px!important;
 }
-
+iframe.Box{
+	display:none;
+}
 p.author {
-color:#666;
+color:#333;
 font-size:10px;
 text-align:center;
 }
@@ -1225,12 +1250,6 @@ margin: 5px 0;
 background: none 
 transparent!important;
 border: none!important;
-}
-p#back-top{
-opacity:1!important;
-}
-p#back-top:hover{
-background:none transparent!important;
 }
 select {
 -webkit-appearance:menulist;
@@ -1246,7 +1265,12 @@ cursor:default;
 font-size:16px;
 white-space:pre;
 }
-
+textarea.TextBox {
+width: 98%;
+height: 100px;
+min-height: 100px;
+min-width: 100px;
+}
 ul.Activities .ItemContent {
 max-width:none;
 padding-bottom:20px;
@@ -1315,12 +1339,6 @@ width:45px;
 
 ul.Discussions,.Alt,body.Profile ul.Discussions .Mine,li.Editing {
 background:#222;
-}
-tbody, tr, td {
-border: none 
-transparent!important;
-border-style: none;
-border-width: 0;
-display: inline;
+}ay: inline;
 float: left;
 }
